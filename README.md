@@ -27,7 +27,7 @@ Here's a walkthrough of implemented user stories:
 
 Users stays logged in across restart:
 
-<img src='http://g.recordit.co/hzFTy9r2Hr.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/q3zSHt14or.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 Bonus features walkthrough:
 
