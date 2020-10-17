@@ -14,6 +14,32 @@ class TweetViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        // Display keyboard and cursor
+        tweetTextView.becomeFirstResponder()
+    }
+    
+    
+    @IBOutlet weak var tweetTextView: UITextView!
+    
+    
+    @IBAction func cancel(_ sender: Any) {
+        // Dismiss controller
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func tweet(_ sender: Any) {
+        
+        if(!tweetTextView.text.isEmpty){
+            TwitterAPICaller.client?.postTweet(tweetString: tweetTextView.text, success: {
+                self.dismiss(animated: true, completion: nil)
+            }, failure: { (error) in
+                print("Error posting tweet \(error)")
+                self.dismiss(animated: true, completion: nil)
+            })
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
+        
     }
     
 
